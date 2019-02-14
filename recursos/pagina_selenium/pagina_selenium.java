@@ -1,8 +1,9 @@
 package pagina_selenium; 
 import java.util.concurrent.TimeUnit;
-
+import java.awt.event.InputEvent;
+import java.awt.AWTException;
+import java.awt.Robot;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pagina_driver.pagina_driver;
 import org.openqa.selenium.WebElement;
@@ -19,13 +20,22 @@ public class pagina_selenium extends pagina_driver{
 		correo.sendKeys("solocisf390@gmail.com");
 		
 	}
-	public void ingresarcontraseña(){
+	public void ingresarcontraseña() throws AWTException, InterruptedException{
 		WebElement contrasena=driver.findElement(By.id("Password"));
 		contrasena.sendKeys("Soydelleon93");
 		WebElement submit=driver.findElement(By.id("btnLog"));
 		submit.click();
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS) ;
-		WebElement nomina=driver.findElement(By.xpath("(//a[contains(@href, \"javascript:document.getElementById('logoutForm').submit()\")])[2]"));
-		nomina.click();
+		Thread.sleep(5000);
+		Robot Robot = new Robot();
+		Robot.mouseMove(100, 500);
+		Thread.sleep(5000);
+		Robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+		Robot.mouseRelease(InputEvent.BUTTON1_MASK);
+		Thread.sleep(5000);
+		Robot cisf=new Robot();
+		Thread.sleep(5000);
+		cisf.mouseMove(150, 560);
+		cisf.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+		cisf.mouseRelease(InputEvent.BUTTON1_MASK);
 		}
 }
