@@ -26,6 +26,7 @@ public class pagina_selenium extends pagina_driver{
 		WebElement submit=driver.findElement(By.id("btnLog"));
 		submit.click();
 		Thread.sleep(5000);
+		driver.manage().window().maximize();
 		Robot Robot = new Robot();
 		Robot.mouseMove(100, 500);
 		Thread.sleep(5000);
