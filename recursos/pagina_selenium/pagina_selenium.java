@@ -37,5 +37,14 @@ public class pagina_selenium extends pagina_driver{
 		cisf.mouseMove(150, 560);
 		cisf.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 		cisf.mouseRelease(InputEvent.BUTTON1_MASK);
+		Thread.sleep(5000);
+		Robot salir=new Robot();
+		salir.mouseMove(1000, 200);
+		Thread.sleep(2000);
+		salir.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+		Thread.sleep(2000);
+		salir.mouseRelease(InputEvent.BUTTON1_MASK);
+		Thread.sleep(1000);
+		driver.quit();
 		}
 }
