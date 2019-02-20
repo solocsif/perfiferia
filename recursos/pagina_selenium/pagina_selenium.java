@@ -47,5 +47,6 @@ public class pagina_selenium extends pagina_driver{
 		salir.mouseRelease(InputEvent.BUTTON1_MASK);
 		Thread.sleep(1000);
 		driver.quit();
+		
 		}
 }
