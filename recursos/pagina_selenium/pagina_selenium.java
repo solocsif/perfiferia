@@ -18,6 +18,7 @@ public class pagina_selenium extends pagina_driver{
 	public void ingresarcorreo() {
 		WebElement correo=driver.findElement(By.id("Email"));
 		correo.sendKeys("solocisf390@gmail.com");
+		System.out.println("hola ya puse el correo");
 		
 	}
 	public void ingresarcontraseña() throws AWTException, InterruptedException{
